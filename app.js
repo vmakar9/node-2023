@@ -1,42 +1,39 @@
 const fs = require('fs')
-const path = require('path')
 
-const directoryname = 'dir'
+const directory = 'dir'
 
-// fs.mkdir(directoryname,err => {
-//     if(err) throw new Error();
+// fs.mkdir(directory,err => {
+//     if(err) throw new Error()
 // })
 
-// for(let i  =1;i<= 5 ; i++){
-//     fs.mkdir(`${directoryname}/dir${i}`,err => {
-//        if(err) throw new Error();
+// for(let i =1; i<= 5 ; i++){
+//     fs.mkdir(`${directory}/dir${i}`,err => {
+//         if(err) throw new Error
 //     })
 // }
 
-// fs.appendFile(`${directoryname}/user.json`,JSON.stringify({name:'Dante'}),err => {
+// fs.appendFile(`${directory}/user.json`,JSON.stringify({name:'Dante'}),err => {
 //     console.log(err)
 // })
 //
-// fs.appendFile(`${directoryname}/style.css`,"div{height:30px}" ,err => {
+// fs.appendFile(`${directory}/style.css`,"div{height:30px}" ,err => {
 //     console.log(err)
 // })
 //
-// fs.appendFile(`${directoryname}/data.txt`,"Hello World",err => {
+// fs.appendFile(`${directory}/data.txt`,"Hello World",err => {
 //     console.log(err)
 // })
-// fs.appendFile(`${directoryname}/student.json`,JSON.stringify({skills:"Node.js"}),err => {
+// fs.appendFile(`${directory}/student.json`,JSON.stringify({skills:"Node.js"}),err => {
 //     console.log(err)
 // })
-// fs.appendFile(`${directoryname}/doc.txt`, "vblgtpflh" ,err => {
+// fs.appendFile(`${directory}/doc.txt`, "vblgtpflh" ,err => {
 //     console.log(err)
 // })
 
-
-fs.readdir(`${directoryname}/`,{withFileTypes: true},(err,data)=>  {
+fs.readdir(`${directory}/`,{withFileTypes: true},(err,data)=>  {
     if (err) throw new Error()
-
+    console.log(data)
     data.forEach(file=>  {
         console.log(file.isFile())
     })
 })
-
