@@ -34,6 +34,11 @@ fs.readdir(`${directory}/`,{withFileTypes: true},(err,data)=>  {
     if (err) throw new Error()
     console.log(data)
     data.forEach(file=>  {
-        console.log(file.isFile())
+        if(file.isFile()){
+               console.log(`${JSON.stringify(file)} is a file`)
+        }else {
+              console.log(`${JSON.stringify(file)} is a folder`)
+        }
     })
 })
+
